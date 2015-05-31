@@ -1,7 +1,7 @@
-import org.junit.Assert;
+import com.fedomn.ResponseMaker;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by fedomn on 2015/5/31.

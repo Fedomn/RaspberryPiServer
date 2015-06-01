@@ -13,4 +13,10 @@ public class ResponseMakerTests {
         assertEquals("Failure - given playFirst should say /home/pi/server/omx_control.sh play",
                 "/home/pi/server/omx_control.sh play", ResponseMaker.translate("playFirst"));
     }
+
+    @Test
+    public void GIVEN_play_SHOULD_SayOmx() throws Exception {
+        assertEquals("Failure - given play should say /home/pi/server/omx_control.sh",
+                "/home/pi/server/omx_control.sh", ResponseMaker.translate("play"));
+    }
 }

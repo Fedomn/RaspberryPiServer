@@ -19,4 +19,10 @@ public class ResponseMakerTests {
         assertEquals("Failure - given play should say /home/pi/server/omx_control.sh",
                 "/home/pi/server/omx_control.sh", ResponseMaker.translate("play"));
     }
+
+    @Test
+    public void GIVEN_officeFirst_SHOULD_SayLibreoffice() throws Exception {
+        assertEquals("Failure - given officeFirst should say libreoffice",
+                    "libreoffice", ResponseMaker.translate("officeFirst"));
+    }
 }

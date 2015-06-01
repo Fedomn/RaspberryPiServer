@@ -2,6 +2,8 @@ import com.fedomn.ResponseMaker;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
+import static org.hamcrest.Matchers.*;
 
 /**
  * Created by fedomn on 2015/5/31.
@@ -24,5 +26,11 @@ public class ResponseMakerTests {
     public void GIVEN_officeFirst_SHOULD_SayLibreoffice() throws Exception {
         assertEquals("Failure - given officeFirst should say libreoffice",
                     "libreoffice", ResponseMaker.translate("officeFirst"));
+    }
+
+    @Test
+    public void GIVEN_office_SHOULD_SayAIntNum() throws Exception {
+        assertThat("Failure - given office should say a int number",
+                ResponseMaker.translate("office"), anything());
     }
 }

@@ -1,5 +1,7 @@
 package com.fedomn;
 
+import java.io.IOException;
+
 /**
  * Created by fedomn on 2015/6/1.
  */
@@ -10,7 +12,12 @@ public class OfficeFirstHandler extends RequestHandler {
 
     @Override
     public String handler(String request) {
-        if (request.equals("officeFirst")) {
+        if (request.startsWith("officefirst")) {
+            try {
+                Runtime.getRuntime().exec("libreoffice "+ request.replace("officefirst ", "") +" &");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             return "libreoffice";
         } else {
             return successor.handler(request);

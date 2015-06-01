@@ -13,7 +13,7 @@ public class ResponseMakerTests {
     @Test
     public void GIVEN_playFirst_SHOULD_SayOmxPlay() throws Exception {
         assertEquals("Failure - given playFirst should say /home/pi/server/omx_control.sh play",
-                "/home/pi/server/omx_control.sh play", ResponseMaker.translate("playFirst"));
+                "/home/pi/server/omx_control.sh play", ResponseMaker.translate("playfirst"));
     }
 
     @Test
@@ -25,12 +25,12 @@ public class ResponseMakerTests {
     @Test
     public void GIVEN_officeFirst_SHOULD_SayLibreoffice() throws Exception {
         assertEquals("Failure - given officeFirst should say libreoffice",
-                    "libreoffice", ResponseMaker.translate("officeFirst"));
+                    "libreoffice", ResponseMaker.translate("officefirst"));
     }
 
     @Test
     public void GIVEN_office_SHOULD_SayAIntNum() throws Exception {
         assertThat("Failure - given office should say a int number",
-                ResponseMaker.translate("office"), anything());
+                ResponseMaker.translate("office next"), anything());
     }
 }

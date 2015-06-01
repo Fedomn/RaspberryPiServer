@@ -10,6 +10,10 @@ public class OfficeFirstHandler extends RequestHandler {
 
     @Override
     public String handler(String request) {
-        return "";
+        if (request.equals("officeFirst")) {
+            return "libreoffice";
+        } else {
+            return successor.handler(request);
+        }
     }
 }

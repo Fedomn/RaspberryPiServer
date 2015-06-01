@@ -10,7 +10,10 @@ public class OfficeHandler extends RequestHandler {
 
     @Override
     public String handler(String request) {
-        return "";
+        if (request.equals("office")) {
+            return "";
+        } else {
+            return successor.handler(request);
+        }
     }
-
 }

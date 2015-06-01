@@ -10,6 +10,10 @@ public class PlayHandler extends RequestHandler {
 
     @Override
     public String handler(String request) {
-        return "";
+        if (request.equals("play")) {
+            return "/home/pi/server/omx_control.sh";
+        } else {
+            return successor.handler(request);
+        }
     }
 }

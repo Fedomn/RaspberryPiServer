@@ -12,16 +12,5 @@ public class ResponseMaker {
         RequestHandler playHandler = new PlayHandler(officeFirstHandler);
         RequestHandler playFirstHandler = new PlayFirstHandler(playHandler);
         return playFirstHandler.handler(request);
-
-
-        if (request.equals("playFirst")) {
-            return "/home/pi/server/omx_control.sh play";
-        } else if (request.equals("play")) {
-            return "/home/pi/server/omx_control.sh";
-        } else if (request.equals("officeFirst")) {
-            return "libreoffice";
-        } else {
-            return "";
-        }
     }
 }

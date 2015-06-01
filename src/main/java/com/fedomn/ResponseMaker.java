@@ -6,6 +6,12 @@ package com.fedomn;
 public class ResponseMaker {
 
     public static String translate(String request) {
-        return "/home/pi/server/omx_control.sh play";
+        if (request.equals("playFirst")) {
+            return "/home/pi/server/omx_control.sh play";
+        }else if (request.equals("play")) {
+            return "/home/pi/server/omx_control.sh";
+        } else {
+            return "";
+        }
     }
 }
